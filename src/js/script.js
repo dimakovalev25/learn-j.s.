@@ -16,7 +16,7 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: true
+    privat: false
 };
 
 function rememberMyFilms() {
@@ -46,7 +46,7 @@ function detectPersonalLevel() {
 		console.log('errorrr');
 	}
 }
-detectPersonalLevel();
+// detectPersonalLevel();
 
 
 function showMyDB(hidden) {
@@ -55,5 +55,11 @@ function showMyDB(hidden) {
 	}
 }
 
-showMyDB(personalMovieDB.privat);
+// showMyDB(personalMovieDB.privat);
 
+function writeYourGenres() {
+	for(let i = 1; i <= 3; i++) {
+	personalMovieDB.genres.push(prompt(`Ваш любимый жанр под номером ${i}`));
+	}
+}
+writeYourGenres();
