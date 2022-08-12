@@ -1,91 +1,113 @@
 'use strict';
 
-const str = prompt('test','rest');
-const products = str.split(', ');  /*  вопросы записываем в массив! */
-products.sort();  /* сортируем по порядку вводимые данные! */
-console.log(products.join('; ')); /*  склеиваем массив в строку!! */
-console.log(products);
+let arr = [1, 2 , 3, 4, 5,];
+// arr.reverse();
+let newArr = arr.reverse();  /* реверс массива! */
+console.log(newArr);
 
-
-
-const arr = [1, 44, 65, 21, 33, 65, 21, 8];
-arr.sort(compareNum);   /* массив из цифр по порядку не отсортирует так как сортирует по строкам!!! */
-function compareNum(a, b) {
-	return a - b;
-}
-console.log(arr);
-
-
-
-
-const str = 'aa@aa@bb@';
-console.log(str.replace('@', '!')); /* заменяет на ! */
-console.log(str.replace(/@/g, '!'));   /* глобальный поиск и замена на  ! */
-
-const string = 'aaabbbnnn';
-console.log(string.slice(0, 3));
-console.log(string.substring(4, 6));
-
-
-let date = '2025-12-31';
-let arr = date.split('-');   /* с помощью метода split разобьем нашу строку '2025-12-31' в массив по разделителю '-' */
-
-let newDate = arr[2] + '/' + arr[1] + '/' + arr[0];  /* обращаясь к разным элементам массива по их ключам, сформируем нужную нам строку: */
-console.log(newDate);
-
-
-let str = 'sSsSsSsS';
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-console.log(str.length);
-
-
-/* Дана переменная str, в которой хранится какой-либо текст. Реализуйте обрезание длинного текста по следующему принципу: если количество символов этого текста больше заданного в переменной n, то в переменную result запишем первые n символов строки str и добавим в конец троеточие '...'. В противном случае в переменную result запишем содержимое переменной str. */
-
-let str = 'qwertyuiopqwertyuig';
-// console.log(str.length); 
-if(str.length > 28) {
-	let result = str + '...';
-	console.log("done"); 
-	console.log(result); 
-} else {
-	let result = str;
-	console.log(result);
-}
-
-let str = 'Я учу java script!';
-console.log(str.replace(/' '/g, '!'));
-console.log(str.split(''));
-console.log(str.split(' '));
-
-
-
-
-/* Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в строку 'я+учу+javascript+! */
-
-let arr = ['я', 'учу', 'javascript', '!'];
-let str = arr.join();
+let str = '12345';
+let arr = str.split('');  
+let arr2 = arr.reverse();
+str = arr2.join(''); 
 console.log(str);
-let newStr = str.replace(/,/g, '+');
-console.log(newStr);
 
-/* Преобразуйте первую букву строки в верхний регистр. */
-let str = '--555fg ';
-let newStr = str[0].toUpperCase() + str.slice(1);
+let str = '12345';
+let res = str.split('').reverse().join('');
+console.log(res);
 
-console.log(newStr);
+let arr = [1, 2, 3, 4, 6,];
+let newArr = arr.slice(1, -1);
+console.log(newArr);
 
-let date = '2025-12-31';
-let arr = date.split('-');
+let arr = [1, 2, 3, 4, 6,];
+arr.splice(1, 0 );
+// let del = arr.splice(1, 2);  /* в del сохраняються удаленные части объекта! */
 console.log(arr);
-let newDate = arr[2] + '/' + arr[1] + '/' + arr[0];
-console.log(newDate);
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+// arr.splice(2, 1, '1', 'bbbb'); удаляем и записываем 1 и bbbb
+arr.splice(4, 0, 'done!!' ); /* ничего не удаляем и записываем done! */
+console.log(arr);
 
 
-let str = 'var_test_text';
+let arr = ['a', 'b', 'c', 'd', 'e'];
+arr.splice(-1, 1); /* удаляем последний элемент массива! */
+console.log(arr);
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+arr.shift();  /*  удаляет первый элемент массива! */
+console.log(arr);
+
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+let newArr = arr.pop();  /*  удаляет последний элемент массива! */
+console.log(newArr);
+
+
+let arr = ['1', '2', '3', '4', '5', '6'];  /* превращаем в строку 16-25-34 */
+let result = [];
+while (arr.length > 0) {
+	let first = arr.shift();
+	let last = arr.pop();
+	let str = first + last;
+	result.push(str);
+}
+result = result.join('-');
+console.log(result);
+
+
+let arr = [1, 5, 6];
+arr.unshift('11', 22); /*  в начало массива добавим еще два новых элемента */
+console.log(arr);
+
+let arr = [1, 3,];
+// push добавляет неограниченное количество элементов в конец массива
+arr.push('gggg', '55555');
+console.log(arr);
 
 
 
+let arr = [];
+// Заполним массив числами от 1 до 9:
+for (let i = 1; i <= 19; i++) {  
+	arr.push(i);
+}
+console.log(arr);
 
 
+let arr = [2, 4, 5, 7, 9];
+let res = arr.map(function(elem) {
+	return elem * 2;
+});
+console.log(res);
 
+let arr = [2, 4, 5, 7, 9];
+let res = arr.map(function(elem, index) {
+	return elem * index;
+});
+
+console.log(res);
+
+
+let arr = [1, 2, 3, 4, 5];
+let sum = 0;
+
+arr.forEach(function(elem) {
+	sum += elem;
+});
+
+console.log(sum);
+
+
+let numbers = [-2, 5, 1, -5, -1, 
+	1, 3, 4, -1]; 
+
+let result = numbers.filter(function(elem) {
+	if (elem >= 0) {
+		return true;
+	} else {
+		return false;
+	}
+});
+
+console.log(result);
