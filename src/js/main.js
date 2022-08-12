@@ -111,3 +111,74 @@ let result = numbers.filter(function(elem) {
 });
 
 console.log(result);
+
+
+let a =[1, 2, 3];
+let b =[4, 5, 6];
+let c = a.concat(b);  /* объединение массовов */
+let d = c.concat(a);
+
+
+console.log(c);
+console.log(d);
+
+let arr =[1, 2, 3];
+arr.push(4, 5, 6);
+console.log(arr);
+
+let arr =[1, 2, 3];
+arr.reverse();
+console.log(arr);
+
+let arr =[1, 2, 3];
+arr.push(44, 55,);
+console.log(arr);
+arr.unshift('22', 1, 1,);
+console.log(arr);
+
+
+let arr = ['js', 'css', 'jq'];
+let a = arr.shift();
+console.log(a);
+
+let arr = ['js', 'css', 'jq'];
+let a = arr.pop();
+console.log(a);
+
+
+let arr = [1, 2, 3, 4, 5];
+let e = arr.slice(0, 3);
+console.log(e);
+
+
+let arr = [1, 2, 3, 4, 5];
+let e = arr.slice(2, 4);
+console.log(e);
+
+
+let arr = [1, 2, 3, 4, 5];
+arr.splice(1, 2);
+console.log(arr);
+
+let arr = [1, 2, 3, 4, 5];
+let a = arr.splice(1, 3);
+console.log(a);
+
+
+let arr = [1, 2, 3, 4, 5];
+arr.splice(1, 0, 'a', 'b');
+arr.splice(6, 0, 'c');
+arr.splice(8, 0, 'e');
+console.log(arr);
+
+
+let arr = [3, 4, 1, 2, 7];
+arr.sort();
+console.log(arr);
+
+let obj = {
+	js:'test',
+	jq: 'hello',
+	css: 'world'
+};
+console.log(Object.keys(obj));
