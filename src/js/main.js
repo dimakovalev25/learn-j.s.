@@ -1,184 +1,99 @@
 'use strict';
 
-let arr = [1, 2 , 3, 4, 5,];
-// arr.reverse();
-let newArr = arr.reverse();  /* реверс массива! */
-console.log(newArr);
-
-let str = '12345';
-let arr = str.split('');  
-let arr2 = arr.reverse();
-str = arr2.join(''); 
-console.log(str);
-
-let str = '12345';
-let res = str.split('').reverse().join('');
-console.log(res);
-
-let arr = [1, 2, 3, 4, 6,];
-let newArr = arr.slice(1, -1);
-console.log(newArr);
-
-let arr = [1, 2, 3, 4, 6,];
-arr.splice(1, 0 );
-// let del = arr.splice(1, 2);  /* в del сохраняються удаленные части объекта! */
-console.log(arr);
-
-let arr = ['a', 'b', 'c', 'd', 'e'];
-// arr.splice(2, 1, '1', 'bbbb'); удаляем и записываем 1 и bbbb
-arr.splice(4, 0, 'done!!' ); /* ничего не удаляем и записываем done! */
-console.log(arr);
-
-
-let arr = ['a', 'b', 'c', 'd', 'e'];
-arr.splice(-1, 1); /* удаляем последний элемент массива! */
-console.log(arr);
-
-let arr = ['a', 'b', 'c', 'd', 'e'];
-arr.shift();  /*  удаляет первый элемент массива! */
-console.log(arr);
-
-
-let arr = ['a', 'b', 'c', 'd', 'e'];
-let newArr = arr.pop();  /*  удаляет последний элемент массива! */
-console.log(newArr);
-
-
-let arr = ['1', '2', '3', '4', '5', '6'];  /* превращаем в строку 16-25-34 */
-let result = [];
-while (arr.length > 0) {
-	let first = arr.shift();
-	let last = arr.pop();
-	let str = first + last;
-	result.push(str);
+function showMess() {
+	console.log('hello');
 }
-result = result.join('-');
-console.log(result);
+showMess();
 
 
-let arr = [1, 5, 6];
-arr.unshift('11', 22); /*  в начало массива добавим еще два новых элемента */
-console.log(arr);
-
-let arr = [1, 3,];
-// push добавляет неограниченное количество элементов в конец массива
-arr.push('gggg', '55555');
-console.log(arr);
-
-
-
-let arr = [];
-// Заполним массив числами от 1 до 9:
-for (let i = 1; i <= 19; i++) {  
-	arr.push(i);
+function showMess(text) {
+	console.log(text);
 }
-console.log(arr);
+showMess('Hello!!!');
 
 
-let arr = [2, 4, 5, 7, 9];
-let res = arr.map(function(elem) {
-	return elem * 2;
-});
-console.log(res);
-
-let arr = [2, 4, 5, 7, 9];
-let res = arr.map(function(elem, index) {
-	return elem * index;
-});
-
-console.log(res);
+function showMess(a, b, c) {
+	console.log(a * b / c + num);
+	let num = 20;
+}
+showMess(10, 10, 5);
+console.log(num);
 
 
-let arr = [1, 2, 3, 4, 5];
-let sum = 0;
-
-arr.forEach(function(elem) {
-	sum += elem;
-});
-
-console.log(sum);
-
-
-let numbers = [-2, 5, 1, -5, -1, 
-	1, 3, 4, -1]; 
-
-let result = numbers.filter(function(elem) {
-	if (elem >= 0) {
-		return true;
-	} else {
-		return false;
-	}
-});
-
-console.log(result);
+let num = 10;
+function showMess(a, b, c) {
+	console.log();
+	let num = 20;
+}
+showMess(10, 10, 5);
+console.log(num);
 
 
-let a =[1, 2, 3];
-let b =[4, 5, 6];
-let c = a.concat(b);  /* объединение массовов */
-let d = c.concat(a);
+
+console.log(calc(10, 77));
+console.log(calc(10, 777));
+console.log(calc(10, 7777));
+console.log(calc(10, 77777));
+console.log(calc(10, 777777));
+
+function calc(a, b) {
+	return (a + b);
+}
 
 
-console.log(c);
-console.log(d);
-
-let arr =[1, 2, 3];
-arr.push(4, 5, 6);
-console.log(arr);
-
-let arr =[1, 2, 3];
-arr.reverse();
-console.log(arr);
-
-let arr =[1, 2, 3];
-arr.push(44, 55,);
-console.log(arr);
-arr.unshift('22', 1, 1,);
-console.log(arr);
+function ret() {
+	let num = 44;
+	return num;
+}
+const numM = ret();
+console.log(numM);
 
 
-let arr = ['js', 'css', 'jq'];
-let a = arr.shift();
-console.log(a);
-
-let arr = ['js', 'css', 'jq'];
-let a = arr.pop();
-console.log(a);
-
-
-let arr = [1, 2, 3, 4, 5];
-let e = arr.slice(0, 3);
-console.log(e);
-
-
-let arr = [1, 2, 3, 4, 5];
-let e = arr.slice(2, 4);
-console.log(e);
-
-
-let arr = [1, 2, 3, 4, 5];
-arr.splice(1, 2);
-console.log(arr);
-
-let arr = [1, 2, 3, 4, 5];
-let a = arr.splice(1, 3);
-console.log(a);
-
-
-let arr = [1, 2, 3, 4, 5];
-arr.splice(1, 0, 'a', 'b');
-arr.splice(6, 0, 'c');
-arr.splice(8, 0, 'e');
-console.log(arr);
-
-
-let arr = [3, 4, 1, 2, 7];
-arr.sort();
-console.log(arr);
-
-let obj = {
-	js:'test',
-	jq: 'hello',
-	css: 'world'
+let log = function() {     /* function expression */
+	console.log('hhh');
 };
-console.log(Object.keys(obj));
+log();
+
+
+const calc = (a, b) => a + b;    /*  стрелочная функция */
+const calc = (a, b) => { return a + b };    /*  стрелочная функция */
+const calc = a => a + b ;    /*  стрелочная функция если в одну строку!!!*/
+
+const calc = (a, b) => {
+	return a + b
+
+};
+
+
+
+
+let usd = 2.4;
+let euro = 2.64;
+function convert(a, b) {
+	console.log(a * b);
+}
+convert(500, usd);
+convert(500, euro);
+
+
+
+let usd = 2.4;
+let euro = 2.64;
+let disc = 0.5;
+function convert(a, b) {
+	return a * b;
+}
+function promo(result) {
+	console.log(result * disc);
+}
+promo(convert(500, usd));
+
+
+function test() {
+	for (let i = 0; i < 5; i++) {
+		console.log(i);
+		if( i === 3 ) return
+	}
+	console.log('done')
+}
+test();
